@@ -9,7 +9,7 @@ pipeline {
       }
       stage('docker get ready'){
          steps{
-         sh(script:'sudo usermod -a -G docker jenkins')
+         sh(script:'usermod -a -G docker jenkins')
             }
       }
       stage('Docker Build') {
