@@ -9,7 +9,7 @@ pipeline {
       }
       stage('docker get ready'){
          steps{
-         sh(script:'docker --version')
+         sh(script:'docker image ls')
             }
       }
       stage('Docker Build') {
