@@ -7,11 +7,11 @@ pipeline {
             echo "$GIT_BRANCH"
          }
       }
-//       stage('docker get ready'){
-//          steps{
-//          sh(script:'usermod -a -G docker jenkins')
-//             }
-//       }
+      stage('docker get ready'){
+         steps{
+         sh(script:'groupadd docker')
+            }
+      }
       stage('Docker Build') {
          steps {
             sh 'docker images -a'
