@@ -9,7 +9,7 @@ pipeline {
       }
       stage('docker get ready'){
          steps{
-         sh(script:'groupadd docker')
+         sh(script:'docker --version')
             }
       }
       stage('Docker Build') {
