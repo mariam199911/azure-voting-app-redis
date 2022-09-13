@@ -7,6 +7,11 @@ pipeline {
             echo "$GIT_BRANCH"
          }
       }
+      stage('docker get ready'){
+         steps{
+         sh(script:'sudo usermod -a -G docker jenkins')
+            }
+      }
       stage('Docker Build') {
          steps {
             sh(script: 'docker run hello-world')
